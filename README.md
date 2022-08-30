@@ -30,3 +30,38 @@ Systems Administrators and DevOps Engineers have always been charged to do more 
 - Reusable components
 - Documented architecture
 
+## Terraform
+- Infrastructure automation tool
+- Open-source and vendor agnostic
+- Declarative syntax
+- HashiCorp configuration Language or JSON
+- push-type to the enviroment
+
+### Components
+- Executable
+- Configuration files
+- Provider plugins
+- State data: current information in target enviroment
+
+### Block Syntax
+```
+block_type "label" "name_label"{
+    key = "value"
+    nested_block {
+        key = "value"
+    }
+}
+```
+
+### Execise Files
+https://github.com/ned1313/Getting-Started-Terraform
+
+### Install
+
+- `wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg`
+- `echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list`
+- `sudo apt update && sudo apt install terraform`
+- `terraform version`
+
+### Labs
+Follow commands to create a develop enviroment in AWS to Globalmantics
